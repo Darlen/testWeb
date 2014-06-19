@@ -1,6 +1,7 @@
 package com.darlen.servlet;
 
 import com.darlen.util.Util;
+import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import javax.servlet.ServletException;
@@ -21,6 +22,7 @@ import java.util.Map;
  */
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 4348577223281597346L;
+    private static Logger logger =Logger.getLogger(LoginServlet.class);
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 		String pwd = Util.nullToString(request.getParameter("password"));
 		session.setAttribute("user", name);
 
-
+        logger.info("开始begain");
 		ObjectMapper mapper = new ObjectMapper();
 		Map result = new HashMap();
 
@@ -55,6 +57,7 @@ public class LoginServlet extends HttpServlet {
 //				return;
 			}
 		} finally {
+            logger.info("结束end");
 			String out =mapper.writeValueAsString(result);
 			PrintWriter pw =  response.getWriter();
 			pw.print(out);
