@@ -9,6 +9,8 @@
         <welcome-file>index.jsp,index.html</welcome-file>
     </welcome-file-list>
 
+
+
     <servlet>
         <servlet-name>testLogin</servlet-name>
         <servlet-class>com.darlen.servlet.LoginServlet</servlet-class>
