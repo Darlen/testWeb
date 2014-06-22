@@ -1,9 +1,13 @@
 package com.darlen.jdbc;
 
+import com.darlen.dao.impl.UserDaoImpl;
+import com.darlen.po.User;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.util.Collection;
+import java.util.Date;
 
 /**
  * Description:
@@ -65,8 +69,17 @@ public class DataUtil {
 
 	//测试方法
 	public static void main(String[] args) {
-		JDBCExecutor executor = JDBCExecutor.getJDBCExecutor();
-		//us.AddUser(new User("111",12,"333"));
+		JDBCExecutor executor = JDBCExecutor.getJDBCExecutorInstance();
+        UserDaoImpl dao = new UserDaoImpl();
+        User user = new User();
+        user.setName("darlen");
+        user.setPwd("darlen");
+        user.setEmail("darlen");
+        user.setPhone("darlen");
+        user.setCreatedDate(new Date());
+        user.setUpdatedDate(new Date());
+        dao.save(user);
+		//  us.AddUser(new User("111",12,"333"));
 		//  ResultSet rs = executor.executeQuery("select * from user");
 		//  Collection<User> result = DataUtil.getDatas(new ArrayList<User>(), rs,
 		//    User.class);

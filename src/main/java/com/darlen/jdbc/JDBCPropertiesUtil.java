@@ -45,9 +45,9 @@ public class JDBCPropertiesUtil
 			JDBC_URL = properties.getProperty("JDBC.URL");
 			JDBC_USERNAME = properties.getProperty("JDBC.USERNAME");
 			JDBC_PASSWORD = properties.getProperty("JDBC.PASSWORD");
-			JDBC_PASSWORD = properties.getProperty("JDBC.IP");
-			JDBC_PASSWORD = properties.getProperty("JDBC.PORT");
-			JDBC_PASSWORD = properties.getProperty("JDBC.DATABASE");
+			JDBC_IP = properties.getProperty("JDBC.IP");
+			JDBC_PORT = properties.getProperty("JDBC.PORT");
+			JDBC_DATABASE = properties.getProperty("JDBC.DATABASE");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

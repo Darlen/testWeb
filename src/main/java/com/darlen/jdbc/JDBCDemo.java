@@ -102,7 +102,7 @@ public class JDBCDemo {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }catch (SQLException e) {
-           e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+           e.printStackTrace();
        }finally {
            closeAll();
         }
