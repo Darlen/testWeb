@@ -9,17 +9,24 @@
         <welcome-file>index.jsp,index.html</welcome-file>
     </welcome-file-list>
 
-
-
     <servlet>
         <servlet-name>testLogin</servlet-name>
         <servlet-class>com.darlen.servlet.LoginServlet</servlet-class>
-
     </servlet>
     <servlet-mapping>
         <servlet-name>testLogin</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadImgServlet</servlet-name>
+        <servlet-class>com.darlen.servlet.UploadImgServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadImgServlet</servlet-name>
+        <url-pattern>/uploadImg.do</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

@@ -29,7 +29,7 @@ public class TestEmployeeDAO  {
 
         EmployeesDao dao = new EmployeesDao();
         try {
-            dao.addEmployees(user);
+           // dao.addEmployees(user);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,7 +51,7 @@ public class TestEmployeeDAO  {
         EmployeesDao2 dao = new EmployeesDao2();
         try {
 //            TempBaseDAO2<User> dao = new TempBaseDAO2<User>();
-            dao.save(user,"pm_user");
+           // dao.save(user,"pm_user");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -72,7 +72,7 @@ public class TestEmployeeDAO  {
             user.setEmail("darlen1@1.COM");
             user.setCreatedDate(new Date());
             user.setUpdatedDate(new Date());
-            dao.updateEmp(user);
+           // dao.updateEmp(user);
            // System.out.println(dao.findById(1));
 
         } catch (Exception e) {
