@@ -32,9 +32,9 @@ public class UploadImgServlet extends HttpServlet {
         // 1. 实例化一个硬盘文件工厂,用来配置上传组件ServletFileUpload
         DiskFileItemFactory factory = new DiskFileItemFactory();
         //           设置上传文件时用于临时存放文件的内存大小,这里是2K.多于的部分将临时存在硬盘
-        factory.setSizeThreshold(1024*2);
+        //factory.setSizeThreshold(1024*2);
 //      设置存放临时文件的目录,web根目录下的ImagesUploadTemp目录
-        factory.setRepository(new File("c:\\file"));//临时文件
+        //factory.setRepository(new File("c:\\file"));//临时文件
 
 //          以上两项可通过DiskFileItemFactory构参来创建
 //          DiskFileItemFactory factory = new DiskFileItemFactory(yourMaxMemorySize, yourTempDirectory);
@@ -80,7 +80,7 @@ public class UploadImgServlet extends HttpServlet {
                     logger.info("filename:"+filename);
                     // 创建文件
                     ServletContext context = getServletContext();
-                    String dir = context.getRealPath("WEN-INF/upload");
+                    String dir = context.getRealPath("WEB-INF/uploadIMG");
                     File file = new File(dir,filename);
                     file.createNewFile();
 
