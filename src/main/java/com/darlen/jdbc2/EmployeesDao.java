@@ -37,4 +37,9 @@ public class EmployeesDao extends TempBaseDAO<PM_User> {
         this.update(entity);
     }
 
+    public  List<PM_User> getTotalUser(){
+
+        return null;
+    }
+
 }
